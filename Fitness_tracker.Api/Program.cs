@@ -1,4 +1,4 @@
-namespace Fitness_tracker
+namespace Fitness_tracker.Api
 {
     public class Program
     {
