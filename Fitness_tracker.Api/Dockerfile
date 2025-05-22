@@ -30,4 +30,7 @@ RUN dotnet publish "./Fitness_tracker.Api.csproj" -c $BUILD_CONFIGURATION -o /ap
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+COPY ./Fitness_tracker.Api/certs/ /app/certs/
+ENV ASPNETCORE_Kestrel__Certificates__Default__Path=/app/certs/aspnetsert.pfx
+ENV ASPNETCORE_Kestrel__Certificates__Default__Password=FirstFranklin
 ENTRYPOINT ["dotnet", "Fitness_tracker.Api.dll"]
