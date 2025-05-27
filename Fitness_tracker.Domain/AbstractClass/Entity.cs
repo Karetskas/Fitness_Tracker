@@ -1,6 +1,6 @@
-﻿namespace Fitness_tracker.Domain.Interfaces
+﻿namespace Fitness_tracker.Domain.AbstractClass
 {
-    public interface IEntity
+    public abstract class Entity
     {
         public Guid Id { get; set; }
 

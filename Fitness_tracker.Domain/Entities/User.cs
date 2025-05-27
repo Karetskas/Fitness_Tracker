@@ -1,13 +1,9 @@
-﻿using Fitness_tracker.Domain.Interfaces;
+﻿using Fitness_tracker.Domain.AbstractClass;
 
 namespace Fitness_tracker.Domain.Entities
 {
-    public sealed class User : IEntity
+    public sealed class User : Entity
     {
-        public Guid Id { get; set; }
-        
-        public DateTime Created { get; set; }
-
         public string Username { get; set; } = string.Empty;
 
         public string PasswordHash { get; set; } = string.Empty;
@@ -15,7 +11,5 @@ namespace Fitness_tracker.Domain.Entities
         public string Email { get; set; } = string.Empty;
 
         public string? AvatarUrl { get; set; }
-
-        public DateTime? Deleted { get; set; }
     }
 }
